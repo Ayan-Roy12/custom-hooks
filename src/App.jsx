@@ -1,0 +1,15 @@
+// eslint-disable-next-line no-unused-vars
+import React from 'react';
+import './App.css';
+import useStorage from './useStorage';
+
+function App() {
+  const [content, setContent] = useStorage('content','')
+  return (
+    <div>
+      <input type="text" value={content} onChange={e=>setContent(e.target.value)}></input>
+    </div>
+  );
+}
+
+export default App;
